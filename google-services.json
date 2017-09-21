@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "864211537359",
+    "firebase_url": "https://rectapp-5dfb1.firebaseio.com",
+    "project_id": "rectapp-5dfb1",
+    "storage_bucket": "rectapp-5dfb1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864211537359:android:5fb5c9ae5b7e169a",
+        "android_client_info": {
+          "package_name": "com.rect.alumni"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "864211537359-jjs1vt3hkrq12voa20hsuh25j6cuppd9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCezem_C_U99Uaz4n1PolYVT2eP3O0tkHQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

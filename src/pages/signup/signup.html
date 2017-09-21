@@ -1,0 +1,48 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content  id="signupPage">
+
+  <ion-card padding id="signupCard" overflow-scroll="true" >
+  <h1>Create an account</h1>
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary-dark" stacked>User name</ion-label>
+      <ion-input type="text" [(ngModel)]="userData.username" placeholder="User Name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary-dark" stacked>Email</ion-label>
+      <ion-input type="email" [(ngModel)]="userData.email" placeholder="Email Address"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary-dark" stacked>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="userData.password" placeholder="Password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary-dark">Date of Birth</ion-label>
+      <ion-datetime displayFormat="DD/MMM/YYYY" [(ngModel)]="userData.myDate">
+      </ion-datetime>
+    </ion-item>
+  </ion-list>
+  <ion-list radio-group [(ngModel)]="userData.gender">
+        <ion-item>
+          <ion-label>Male</ion-label>
+          <ion-radio value="Male" checked></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Female</ion-label>
+          <ion-radio value="Female"></ion-radio>
+        </ion-item>
+   </ion-list>
+      <button ion-button block (click)="signUp()">Sign Up</button>
+    <div style="text-align:center;padding-top:20px;">
+      <button ion-button full clear  (click)="login()" >Back to Login Page</button>
+    </div>
+  </ion-card>
+
+</ion-content>

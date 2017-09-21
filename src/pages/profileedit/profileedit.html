@@ -1,0 +1,147 @@
+<!--
+  Generated template for the ProfileeditPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Edit Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content overflow-scroll="true" >
+  <ion-list>
+      <ion-item-group>
+         <ion-item-divider color="light">
+            Basic Details
+          </ion-item-divider>
+            <ion-item>
+              <ion-label color="primary-dark" stacked>User name</ion-label>
+              <ion-input type="text" [(ngModel)]="userData.displayName" placeholder="User Name"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="primary-dark">Date of Birth</ion-label>
+              <ion-datetime displayFormat="DD/MMM/YYYY" [(ngModel)]="userData.dob">
+              </ion-datetime>
+            </ion-item>
+      </ion-item-group>
+  </ion-list>
+  <ion-list radio-group [(ngModel)]="userData.genid">
+        <ion-item>
+          <ion-label>Male</ion-label>
+          <ion-radio value="Male" checked></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Female</ion-label>
+          <ion-radio value="Female"></ion-radio>
+        </ion-item>
+   </ion-list>
+
+   <ion-list>
+   <ion-item>
+      <ion-label>Blood Group</ion-label>
+      <ion-select [(ngModel)]="userData.bloodgroup" interface="action-sheet" >
+        <ion-option value="O+">O+</ion-option>
+        <ion-option value="B+">B+</ion-option>
+        <ion-option value="AB+">AB+</ion-option>
+        <ion-option value="A-">A-</ion-option>
+        <ion-option value="O-">O-</ion-option>
+        <ion-option value="B-">B-</ion-option>
+        <ion-option value="AB-">AB-</ion-option>
+      </ion-select>
+    </ion-item>
+   </ion-list>
+    <ion-list radio-group [(ngModel)]="userData.maritial">
+        <ion-item>
+          <ion-label>Single</ion-label>
+          <ion-radio value="Single" checked></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Maried</ion-label>
+          <ion-radio value="Maried"></ion-radio>
+        </ion-item>
+   </ion-list>
+
+  <ion-list>
+  <ion-item-group>
+    <ion-item-divider color="greay">Contact Details</ion-item-divider>
+    <ion-item>
+        <ion-label color="primary-dark" stacked>Phone Number</ion-label>
+        <ion-input type="text" [(ngModel)]="userData.phone" placeholder="Phone Number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>Allow for view</ion-label>
+          <ion-select [(ngModel)]="userData.isphoneVisible" interface="action-sheet" >
+              <ion-option value="true">Yes</ion-option>
+              <ion-option value="false">No</ion-option>
+            </ion-select>
+      </ion-item>
+
+      <ion-item>
+          <ion-label color="primary-dark" stacked>Email</ion-label>
+          <ion-input type="email" [(ngModel)]="userData.email"  placeholder="Email Address"></ion-input>
+        </ion-item>
+  </ion-item-group>
+
+
+
+    <ion-item-group>
+      <ion-item-divider color="light">
+            Rect Details
+      </ion-item-divider>
+
+         <ion-item>
+          <ion-label>Department</ion-label>
+          <ion-select [(ngModel)]="userData.dept" interface="action-sheet" >
+            <ion-option value="Mech">Mech</ion-option>
+            <ion-option value="Civil">Civil</ion-option>
+            <ion-option value="EEE">EEE</ion-option>
+            <ion-option value="ECE">ECE</ion-option>
+            <ion-option value="CSE">CSE</ion-option>
+          </ion-select>
+        </ion-item>
+
+
+          <ion-item>
+              <ion-label >Passout</ion-label>
+              <ion-datetime displayFormat="YYYY" [(ngModel)]="userData.passout">
+              </ion-datetime>
+            </ion-item>
+
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider color="light">
+            Work Details
+      </ion-item-divider>
+
+      <ion-item>
+          <ion-label>Work Type</ion-label>
+          <ion-select [(ngModel)]="userData.employeetype" interface="action-sheet" >
+            <ion-option value="Employed">Employed</ion-option>
+            <ion-option value="Self Employed">Self Employed</ion-option>
+          </ion-select>
+        </ion-item>
+          <ion-item>
+         <ion-label color="primary-dark" stacked>Company Name</ion-label>
+          <ion-input type="text" [(ngModel)]="userData.cname" placeholder="Company Name"></ion-input>
+      </ion-item>
+        <ion-item>
+         <ion-label color="primary-dark" stacked>Role</ion-label>
+          <ion-input type="text" [(ngModel)]="userData.crole" placeholder="Role"></ion-input>
+      </ion-item>
+        <ion-item>
+         <ion-label color="primary-dark" stacked>Location</ion-label>
+          <ion-input type="text" [(ngModel)]="userData.clocation" placeholder="Location"></ion-input>
+      </ion-item>
+
+    </ion-item-group>
+
+  </ion-list>
+  <button ion-button full (click)="edit()" style="height:50px;">Save</button>
+</ion-content>

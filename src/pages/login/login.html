@@ -1,0 +1,39 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content id="loginScreen" overflow-scroll="true">
+
+
+  <ion-card padding id="login-card">
+  <h1 style="margin-bottom:10px;">Login Account</h1>
+
+  <ion-list>
+      <ion-item>
+        <ion-label color="primary-dark" stacked>User Email </ion-label>
+        <ion-input type="text" [(ngModel)]="userData.useremail" placeholder="Email Address"></ion-input>
+      </ion-item>
+
+
+    <ion-item>
+      <ion-label color="primary-dark" stacked>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="userData.password" placeholder="Password"></ion-input>
+    </ion-item>
+    <br/>
+
+    <button ion-button full  (click)="login()">Login</button>
+
+    <div class="link-container">
+    <button ion-button clear href="#" (click)="navigateToSignUpPage()" class="login-link"> Create an Account</button> <button ion-button href="#" (click)="navigateToForgotPassword()" class="login-link" clear text-right> Forgot password</button>
+    </div>
+  </ion-list>
+
+
+  <br/>
+
+</ion-card>
+
+</ion-content>

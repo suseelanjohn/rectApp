@@ -1,0 +1,43 @@
+<!--
+  Generated template for the WelcomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="assets/logo.png">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+
+
+<ion-content padding id="welcome" overflow-scroll="true" >
+
+    <div class="margin-top">
+    <div text-center>
+    <img src="assets/logo-transparent.png" id="logoImage">
+    </div>
+    <h3 text-center>Welcome to Rect portal </h3>
+    <p text-center>It is a place,here management and past and present students can communicate</p>
+    <br/>
+    <br/>
+    <br/>
+    <button ion-button  block  full icon-start (click)="login()" color="primary">
+      <ion-icon name="log-in"></ion-icon>
+      <span class="button-text">Login to Your Account
+      </span>
+      <ion-icon name="arrow-forward"></ion-icon>
+    </button>
+    <button ion-button  icon-start full block (click)="signup()" color="secondary">
+      <ion-icon name="add-circle"></ion-icon>
+      <span class="button-text">Create New Account</span>
+      <ion-icon name="arrow-forward"></ion-icon>
+    </button>
+    </div>
+
+
+
+
+</ion-content>
